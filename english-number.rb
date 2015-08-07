@@ -1,12 +1,15 @@
 def english_number number
+	negative = false
+	
 	if number < 0
-		return 'Please enter a number that isn\t negative.'
+		negative = true
 	end
 	if number == 0
 		return 'zero'
 	end
 	
 	num_string = ''
+	number = number.abs
 	
 	ones_place = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 	tens_place = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
@@ -91,8 +94,11 @@ def english_number number
 		num_string = num_string + ones_place[write - 1]
 	end
 	
+	if negative
+		num_string = "negative " + num_string
+	end
 	num_string
 end
 	
 	
-puts english_number 1000000000000
+puts english_number -1000000000000
