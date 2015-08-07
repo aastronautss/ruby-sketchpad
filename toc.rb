@@ -1,5 +1,7 @@
 line_width = 50
+toc = [["Chapter 1: Numbers", 1], ["Chapter 2: Letters", 72], ["Chapter 3: Variables", 118], ["Chapter 4: Penis", 205]]
+
 puts "Table of Contents".center line_width
-puts "Chapter 1: Numbers".ljust(line_width / 2) + "page 1".rjust(line_width / 2)
-puts "Chapter 2: Letters".ljust(line_width / 2) + "page 72".rjust(line_width / 2)
-puts "Chapter 3: Variables".ljust(line_width / 2) + "page 118".rjust(line_width / 2)
+toc.each do |a|
+	puts a[0].ljust(line_width / 2) + "page #{a[1].to_s}".rjust(line_width / 2)
+end
