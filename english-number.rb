@@ -97,6 +97,7 @@ def english_number number
 	if negative
 		num_string = "negative " + num_string
 	end
+	
 	num_string
 end
 	
